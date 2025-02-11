@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+
+}
+
+
+@font-face {
+    font-family: 'OVTreasure';
+    src: url('./globals/fonts/ov-treasure-font-family-1737352163-0/ovtreasuredemo-Regular-BF67891bb20a9af.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LigthItalic';
+    src: url('./globals/fonts/sf-pro-display/SFPRODISPLAYLIGHTITALIC.OTF') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'RegularItalic';
+    src: url('./globals/fonts/sf-pro-display/SFPRODISPLAYREGULAR.OTF') format('opentype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* Aplicar la fuente al body o a elementos específicos */
+body {
+    font-family: RegularItalic;
+    overflow-y: auto;
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(24px);
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #DCB3AD;
+    border-radius: 4px;
+  }
+
