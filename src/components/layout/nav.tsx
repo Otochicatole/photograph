@@ -38,7 +38,7 @@ export const Nav = ({ isFixed }: { isFixed?: boolean }) => {
                     Galleria
                 </a>
                 <img
-                    src="/RECURSOS/LOGOTIPO/Recurso 2LOGO-IG-2.png"
+                    src="./RECURSOS/LOGOTIPO/Recurso 2LOGO-IG-2.png"
                     className="invert hidden lg:block transition-all duration-500 ease-in-out"
                     style={{
                         width: isFixed ? '166px' : '266px',

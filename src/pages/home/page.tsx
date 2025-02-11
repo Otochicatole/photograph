@@ -50,7 +50,7 @@ export default function Home() {
                 ref={headerRef}
                 className="flex flex-col bg-[url('/FOTOGRAFIAS/HEADER/Meliyabel-166.jpg')] min-h-screen w-full bg-cover items-center justify-center relative pb-[80px] p-3"
             >
-                <img src="/RECURSOS/LOGOTIPO/Recurso 2LOGO-IG-2.png" alt="" width={996} height={484} />
+                <img src="./RECURSOS/LOGOTIPO/Recurso 2LOGO-IG-2.png" alt="" width={996} height={484} />
                 <p className="text-white text-[32px]" style={{ fontFamily: 'OVTreasure' }}>
                     La tua storia merita di essere raccontata con il sorriso giusto
                 </p>
