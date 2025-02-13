@@ -1,6 +1,6 @@
 import Carousel from "../components/carousel.tsx";
 
-export const Presentation = () => {
+const Presentation = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full">
             <h2 className="mb-6 mt-10 font-[LigthItalic]" style={{fontSize: '26px', color: '#545454'}}>“Dove le emozioni diventano arte”</h2>
@@ -24,3 +24,5 @@ export const Presentation = () => {
         </div>
     )
 }
+
+export default Presentation

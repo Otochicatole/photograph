@@ -31,6 +31,7 @@ export default function Carousel() {
                     <motion.img
                         key={i}
                         src={src}
+                        loading="lazy"
                         alt="carousel item"
                         className={`absolute w-[731px] h-[377] object-cover rounded-lg transition-all duration-500 ease-in-out ${getPosition(i)}`}
                         style={{ opacity: i === index ? 1 : 0.6 }}
