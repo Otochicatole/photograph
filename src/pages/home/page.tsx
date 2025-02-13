@@ -4,12 +4,11 @@ import { Button } from "../../components/ui/buttons.tsx";
 import { ArrowDown } from "../../components/ui/arrow-down.tsx";
 import { Nav } from "../../components/layout/nav.tsx";
 import Presentation from './sections/presentation.tsx';
+import Contact from './sections/contact.tsx';
+import AboutMe from './sections/about-me.tsx';
+import HistoryImages from './sections/history-images.tsx';
+import OfferServices from './sections/offer-services.tsx';
 
-// Carga diferida de secciones
-const OfferServices = lazy(() => import('./sections/offer-services.tsx'));
-const HistoryImages = lazy(() => import('./sections/history-images.tsx'));
-const AboutMe = lazy(() => import('./sections/about-me.tsx'));
-const Contact = lazy(() => import('./sections/contact.tsx'));
 const MapPicker = lazy(() => import('./sections/map-picker.tsx'));
 
 export default function Home() {
