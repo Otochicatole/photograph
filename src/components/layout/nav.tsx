@@ -42,7 +42,7 @@ export const Nav = ({ isFixed }: { isFixed?: boolean }) => {
                     className="invert hidden lg:block transition-all duration-500 ease-in-out"
                     loading="lazy"
                     style={{
-                        width: isFixed ? '166px' : '266px',
+                        width: '200px'
                     }}
                     alt=""
                 />
