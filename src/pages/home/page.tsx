@@ -8,6 +8,7 @@ import Contact from './sections/contact.tsx';
 import AboutMe from './sections/about-me.tsx';
 import HistoryImages from './sections/history-images.tsx';
 import OfferServices from './sections/offer-services.tsx';
+import Reviews from './sections/reviews.tsx';
 
 const MapPicker = lazy(() => import('./sections/map-picker.tsx'));
 
@@ -67,13 +68,13 @@ export default function Home() {
                     <section id="contact" className="pt-[137px] min-h-screen">
                         <Contact />
                     </section>
-                    <section className="pt-[87px] min-h-screen">
+                    <section className="pt-[137px] min-h-screen">
                         <MapPicker />
                     </section>
-                    <section id="reviews" className="pt-[87px] min-h-screen">
-                        <h1>Reviews</h1>
+                    <section id="reviews" className="pt-[137px] min-h-screen">
+                        <Reviews />
                     </section>
-                    <section id="faq" className="pt-[87px] min-h-screen">
+                    <section id="faq" className="pt-[137px] min-h-screen">
                         <h1>FAQ</h1>
                         <p>Contenido de la sección FAQ...</p>
                     </section>

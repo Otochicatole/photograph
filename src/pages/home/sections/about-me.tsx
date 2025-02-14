@@ -46,7 +46,7 @@ const AboutMe = memo(() => {
                 {text.valoriText}
             </div>
 
-            <p className="text-[20px] italic text-[#545454] mt-40 text-center">
+            <p className="text-[20px] italic text-[#545454] mb-40 font-[LigthItalic] mt-40 text-center">
                 “Fotografie che parlano il <br /> linguaggio del cuore”
             </p>
 
