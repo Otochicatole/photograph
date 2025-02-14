@@ -1,0 +1,1 @@
+import{r as o,j as t}from"./index-CTLgtGv2.js";const r=o.memo(({src:a,alt:e})=>t.jsx("img",{className:"max-w-[100px] max-h-[100px] object-cover rounded-lg",src:a,alt:e,loading:"lazy",width:100,height:100}));export{r as default};
