@@ -27,7 +27,7 @@ const OfferServices = memo(() => {
                                 <CardImage src={image} alt={title} />
                             </Suspense>
                             <div>
-                                <p className="font-ovtreasure text-[26px] text-[#545454]">{title}</p>
+                                <p className="font-ovtreasure text-[26px] text-[#545454] font-[Ovtreasure]">{title}</p>
                                 <p className="text-[#545454]">{description}</p>
                             </div>
                         </div>

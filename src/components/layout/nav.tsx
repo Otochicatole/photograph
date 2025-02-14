@@ -24,7 +24,7 @@ export const Nav = ({ isFixed }: { isFixed?: boolean }) => {
             {/* Nav pantallas chicas */}
 
             <nav className="flex lg:hidden flex-row w-full justify-between items-center min-h-[70px] bg-white px-3">
-            <img
+                <img
                     src="./RECURSOS/LOGOTIPO/Recurso 2LOGO-IG-2.png"
                     className="invert block transition-all duration-500 ease-in-out"
                     loading="lazy"
@@ -33,7 +33,7 @@ export const Nav = ({ isFixed }: { isFixed?: boolean }) => {
                     }}
                     alt=""
                 />
-            <button
+                <button
                     className={`lg:hidden flex flex-col items-center justify-center cursor-pointer hover:bg-black/5 space-y-1 mr-6 p-3  rounded-sm ${isMobileMenuOpen ? 'rotate-180 transition-all duration-300 ease-in-out' : 'rotate-0 transition-all duration-300 ease-in-out'}`}
                     onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 >
@@ -43,7 +43,7 @@ export const Nav = ({ isFixed }: { isFixed?: boolean }) => {
                 </button>
             </nav>
             <div className={`lg:hidden flex flex-col items-center absolute gap-3 top-[70px] left-0 w-full bg-white p-4 space-y-2 transition-all border-b border-[#DCB3AD] duration-300 ease-in-out ${isMobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0 overflow-hidden'}`}>
-            <a
+                <a
                     className="hover:text-[#999E87] cursor-pointer hover:scale-110 transition-all duration-200 px-3 p-1"
                     onClick={() => scrollToSection('start')}
                 >
@@ -65,7 +65,7 @@ export const Nav = ({ isFixed }: { isFixed?: boolean }) => {
                     className="hover:text-[#999E87] cursor-pointer hover:scale-110 transition-all duration-200 px-3 p-1"
                     onClick={() => scrollToSection('contact')}
                 >
-                    Contrato
+                    Contatto
                 </a>
                 <a
                     className="hover:text-[#999E87] cursor-pointer hover:scale-110 transition-all duration-200 px-3 p-1"
@@ -115,7 +115,7 @@ export const Nav = ({ isFixed }: { isFixed?: boolean }) => {
                     className="hover:text-[#999E87] cursor-pointer hover:scale-110 transition-all duration-200 px-3 p-1"
                     onClick={() => scrollToSection('contact')}
                 >
-                    Contrato
+                    Contatto
                 </a>
                 <a
                     className="hover:text-[#999E87] cursor-pointer hover:scale-110 transition-all duration-200 px-3 p-1"

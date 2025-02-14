@@ -37,6 +37,13 @@ export default function FAQ() {
         setOpenIndex(openIndex === index ? null : index);
     };
 
+    const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     return (
         <div className="fetch flex flex-col items-center w-full">
             <p className="text-[20px] italic text-[#545454] font-[LigthItalic]  mt-6 text-center">
@@ -50,7 +57,7 @@ export default function FAQ() {
                             className="w-full text-left flex justify-between items-center px-4 py-3 text-lg font[Ovtreasure] text-black cursor-pointer hover:bg-[#999e871e] transition"
                             onClick={() => toggleAccordion(index)}
                         >
-                            <span>{faq.question}</span>
+                            <h2 className="font-[OVTreasure]">{faq.question}</h2>
                             <motion.span
                                 animate={{ rotate: openIndex === index ? 180 : 0 }}
                                 transition={{ duration: 0.3 }}
@@ -67,14 +74,14 @@ export default function FAQ() {
                             transition={{ duration: 0.3, ease: "easeInOut" }}
                             className="overflow-hidden"
                         >
-                            <div className="px-4 py-2 text-gray-600">{faq.answer}</div>
+                            <div className="px-4 py-2 text-gray-600 ">{faq.answer}</div>
                         </motion.div>
                     </div>
                 ))}
             </div>
             <h2 className="text-[#545454] text-[48px] mt-25 font-[Ovtreasure] p-3 text-center">Hai altra domanda? Srivimi!</h2>
             <div className="flex w-full items-center justify-center">
-            <Button variant="secondary" className="w-[163px] mt-3">Inviare domanda</Button>
+            <Button variant="secondary" onClick={() => scrollToSection('contact')} className="w-[163px] mt-3">Inviare domanda</Button>
             </div>
             <p className="text-[20px] italic text-[#545454] font-[LigthItalic]  mt-10 text-center">
             “Perché i momenti passano, ma le <br /> emozioni rimangono”

@@ -44,10 +44,7 @@ export default function Home() {
                     La tua storia merita di essere raccontata con il sorriso giusto
                 </p>
                 <div className="flex flex-col w-full items-center p-1 mt-48">
-                    <Button onClick={() => console.log('ciao')}>Benvenuti</Button>
-                </div>
-                <div className="absolute bottom-3 w-full flex justify-center">
-                    <ArrowDown onClick={() => scrollToSection('start')} />
+                    <Button onClick={() => scrollToSection('start')}>Benvenuti</Button>
                 </div>
             </header>
             <main className="flex flex-col w-full h-full pb-40">

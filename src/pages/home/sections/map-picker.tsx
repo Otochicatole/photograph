@@ -16,18 +16,41 @@ const locations = [
     { lat: 41.9028, lng: 12.4964, name: "Roma, Italia" },
     { lat: -34.6037, lng: -58.3816, name: "Buenos Aires, Argentina" },
     { lat: 48.8566, lng: 2.3522, name: "París, Francia" },
+    { lat: -27.498128928096907, lng: -64.856781990429, name: "Las Gurisas" },
+    { lat: -32.872290554586854, lng: -60.75000380389074, name: "Numa" },
+    { lat: -27.498128928096907, lng: -64.856781990429, name: "Los Altos de Ibarlucea" },
+    { lat: -32.62194459637677, lng: -60.15795043034079, name: "Termas de Río Hondo, Santiago del Estero" },
+    { lat: -30.015073724238405, lng: -59.52152245597376, name: "Victoria, Entre Ríos" },
+    { lat: -32.1704756747645, lng: -64.11668927392444, name: "Esquina, Corrientes" },
+    { lat: -32.17582684131967, lng: -64.25447009581491, name: "Río Tercero" },
+    { lat: -26.82230838913975, lng: -65.22344956517442, name: "Almafuerte" },
+    { lat: -32.99704924412067, lng: -60.771864622344516, name: "Tucumán, Argentina" },
+    { lat: -32.94497969514943, lng: -60.709689808012506, name: "Pérez, Rosario, Argentina" },
+    { lat: -33.02151554772674, lng: -60.8786732698597, name: "Rosario, Argentina" },
+    { lat: -32.92153224891949, lng: -60.810987790519206, name: "Zavalla, Santa Fe, Argentina" },
+    { lat: 39.977727840287585, lng: 4.041831763870176, name: "Funes, Argentina" },
+    { lat: 45.78465727452983, lng: 9.07383530153815, name: "Menorca, España" },
+    { lat: 45.78465727452983, lng: 9.07383530153815, name: "Lago di Como, Italia" }
 ];
+
 
 const MapComponent = () => {
     const mapRef = useRef<HTMLDivElement>(null);
     const mapInstance = useRef<Map | null>(null);
 
+    const scrollToSection = (sectionId: string) => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     const iconStyle = useMemo(
         () =>
             new Style({
                 image: new Icon({
-                    src: "https://cdn-icons-png.flaticon.com/128/2776/2776067.png",
-                    scale: 0.3,
+                    src: "./pin/pin.png",
+                    scale: 0.08,
                     anchor: [0.5, 1],
                 }),
             }),
@@ -82,7 +105,7 @@ const MapComponent = () => {
             </h2>
             <div ref={mapRef} className="overflow-hidden rounded-[10px] drop-shadow-lg cursor-move w-full xl:w-[80%] h-[700px]" />
             <div className="flex flex-col w-full xl:w-[80%] items-end justify-center p-3">
-                <Button className="px-3">Aggiungi la mia città!</Button>
+                <Button className="px-3" onClick={() => scrollToSection('contact')}>Aggiungi la mia città!</Button>
             </div>
         </div>
     );
