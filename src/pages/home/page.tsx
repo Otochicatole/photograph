@@ -9,8 +9,10 @@ import AboutMe from './sections/about-me.tsx';
 import HistoryImages from './sections/history-images.tsx';
 import OfferServices from './sections/offer-services.tsx';
 import Reviews from './sections/reviews.tsx';
+import FAQ from './sections/faq.tsx';
 
 const MapPicker = lazy(() => import('./sections/map-picker.tsx'));
+const Footer = lazy(() => import('../../components/layout/footer.tsx'));
 
 export default function Home() {
     const [isNavFixed, setIsNavFixed] = useState(false);
@@ -48,7 +50,7 @@ export default function Home() {
                     <ArrowDown onClick={() => scrollToSection('start')} />
                 </div>
             </header>
-            <main className="flex flex-col w-full h-full">
+            <main className="flex flex-col w-full h-full pb-40">
                 <Suspense fallback={<div className="text-center text-gray-500">Cargando...</div>}>
                     <section id="start" className="flex flex-col pt-[137px] min-h-screen relative">
                         <div className="absolute top-0 flex flex-col w-full mt-3">
@@ -75,11 +77,11 @@ export default function Home() {
                         <Reviews />
                     </section>
                     <section id="faq" className="pt-[137px] min-h-screen">
-                        <h1>FAQ</h1>
-                        <p>Contenido de la sección FAQ...</p>
+                        <FAQ />
                     </section>
                 </Suspense>
             </main>
+            <Footer />
         </div>
     );
 }
