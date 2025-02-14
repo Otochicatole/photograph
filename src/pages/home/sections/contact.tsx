@@ -3,8 +3,8 @@ import { Button } from "../../../components/ui/buttons"
 const Contact = () => {
     return (
         <div className="flex flex-col items-center justify-center w-full p-3" >
-            <form className="flex flex-col gap-10 w-[60%] justify-center items-center text-[#545454]" action="">
-                <div className="flex flex-row gap-40 w-full">
+            <form className="flex flex-col gap-10 p-6 lg:p-0 w-full lg:w-[80%] 2xl:w-[60%] justify-center items-center text-[#545454]" action="">
+                <div className="flex flex-col lg:flex-row gap-6 lg:gap-40 w-full">
                     <div className="flex flex-col gap-3 w-full">
                         <label htmlFor="">Nome</label>
                     <input className="border-2 border-[#DCB3AD] rounded-[10px] p-3 w-full" type="text" />

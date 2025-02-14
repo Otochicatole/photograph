@@ -33,13 +33,13 @@ export default function Home() {
     }, []);
 
     return (
-        <div className="flex flex-col w-full h-full">
+        <div className="flex flex-col w-full h-full min-w-[350px] overflow-auto">
             <header
                 id="home"
                 ref={headerRef}
-                className="flex flex-col bg-[url('/FOTOGRAFIAS/HEADER/Meliyabel-166.jpg')] min-h-screen w-full bg-cover items-center justify-center relative pb-20 p-3"
+                className="flex flex-col bg-[url('/FOTOGRAFIAS/HEADER/Meliyabel-166.jpg')] min-h-screen w-full bg-cover items-center justify-center relative pb-20 p-3 overflow-hidden"
             >
-                <img src="./RECURSOS/LOGOTIPO/Recurso 2LOGO-IG-2.png" loading="lazy" alt="Logo" width={996} height={484} />
+                <img className='w-full lg:w-[996px] lg:h-[484px]' src="./RECURSOS/LOGOTIPO/Recurso 2LOGO-IG-2.png" loading="lazy" alt="Logo"/>
                 <p className="text-white text-2xl font-OVTreasure text-center">
                     La tua storia merita di essere raccontata con il sorriso giusto
                 </p>
@@ -61,7 +61,7 @@ export default function Home() {
                     <section className="flex flex-col pt-[137px]">
                         <OfferServices />
                     </section>
-                    <section className="pt-[87px] pb-[87px] min-h-screen">
+                    <section className="pt-[87px] pb-[87px] ">
                         <HistoryImages />
                     </section>
                     <section id="about-me" className="pt-[137px] min-h-screen pb-20">

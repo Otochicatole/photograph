@@ -7,7 +7,7 @@ type Props = {
 
 const LazyImage = memo(({ src, alt }: Props) => (
     <img
-        className="w-auto h-auto object-cover hover:scale-[101%] transition-transform duration-300"
+        className="w-[20%] h-auto object-cover hover:scale-[101%] transition-transform duration-300"
         src={src}
         alt={alt}
         loading="lazy"

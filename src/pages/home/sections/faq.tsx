@@ -38,12 +38,12 @@ export default function FAQ() {
     };
 
     return (
-        <>
+        <div className="fetch flex flex-col items-center w-full">
             <p className="text-[20px] italic text-[#545454] font-[LigthItalic]  mt-6 text-center">
             “Perché quando fai ciò che ami, ogni immagine <br /> porta con sé un pezzo del tuo cuore”
             </p>
             <h2 className="text-black text-[48px] mt-10 font-[Ovtreasure] p-10 mb-10 text-center">FAQ</h2>
-            <div className="w-full max-w-4xl mx-auto space-y-2">
+            <div className="w-full max-w-xl lg:max-w-4xl p-4 space-y-2">
                 {faqs.map((faq, index) => (
                     <div key={index} className="border border-[#999E87] rounded-[5px] overflow-hidden">
                         <button
@@ -79,6 +79,6 @@ export default function FAQ() {
             <p className="text-[20px] italic text-[#545454] font-[LigthItalic]  mt-10 text-center">
             “Perché i momenti passano, ma le <br /> emozioni rimangono”
             </p>
-        </>
+        </div>
     );
 }

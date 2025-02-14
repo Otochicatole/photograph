@@ -76,12 +76,12 @@ const MapComponent = () => {
     }, [vectorSource]);
 
     return (
-        <div className="flex flex-col items-center justify-center w-full">
-            <h2 className="text-[#545454] text-[38px] mb-10 font-[OVTreasure]">
+        <div className="flex flex-col items-center justify-center w-full p-6">
+            <h2 className="text-[#545454] text-[28px] lg:text-[38px] mb-10 font-[OVTreasure]">
                 Aggiungiamo il tuo evento alla nostra mappa fotografica!
             </h2>
-            <div ref={mapRef} className="overflow-hidden rounded-[10px] drop-shadow-lg cursor-move w-[80%] h-[700px]" />
-            <div className="flex flex-col w-[80%] items-end justify-center p-3">
+            <div ref={mapRef} className="overflow-hidden rounded-[10px] drop-shadow-lg cursor-move w-full xl:w-[80%] h-[700px]" />
+            <div className="flex flex-col w-full xl:w-[80%] items-end justify-center p-3">
                 <Button className="px-3">Aggiungi la mia città!</Button>
             </div>
         </div>

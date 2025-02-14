@@ -16,11 +16,11 @@ const cards = [
 const OfferServices = memo(() => {
     return (
         <div className="flex flex-col items-center justify-center w-full">
-            <div className="flex flex-col w-[80%] p-3">
-                <h3 className="text-[#545454] text-[38px] mb-10">
+            <div className="flex flex-col w-full lg:w-[95%] xl:w-[90%]  2xl:w-[80%] p-3 transition-all">
+                <h3 className="text-[#545454] text-[28px] lg:text-[38px] mb-10">
                     <span className="text-[#DCB3AD] font-bold">Ciò che offro</span> <br /> per il tuo giorno più felice della vita
                 </h3>
-                <div className="grid grid-cols-4 gap-2 w-full">
+                <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-2 w-full">
                     {cards.map(({ id, title, description, image }) => (
                         <div key={id} className="flex flex-row bg-[#FFFDF5] border border-[#798B95] gap-3 rounded-[15px] p-3 items-center justify-center">
                             <Suspense fallback={<div className="min-w-[100px] min-h-[100px] bg-transparent"></div>}>
