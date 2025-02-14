@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect, useRef, useCallback, lazy, Suspense } from 'react';
 import { Button } from "../../components/ui/buttons.tsx";
-import { ArrowDown } from "../../components/ui/arrow-down.tsx";
 import { Nav } from "../../components/layout/nav.tsx";
 import Presentation from './sections/presentation.tsx';
 import Contact from './sections/contact.tsx';
