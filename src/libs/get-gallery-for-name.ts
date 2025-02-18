@@ -9,9 +9,7 @@ interface Image {
 
 interface GalleryItem {
     id: number;
-    name: string;
     Images: Image[];
-    section: { Type: string };
 }
 
 interface ApiResponse {
@@ -26,16 +24,15 @@ interface ApiResponse {
     };
 }
 
-export function getGallery() {
-    return query("galleries?populate=Images&populate=section&pagination[pageSize]=100")
+export function getGalleryForName(name?: string) {
+    return query(`galleries?populate=Images&pagination[pageSize]=100&filters[name][$eq]=${name}`)
         .then((res: ApiResponse) => {
             const { data, meta } = res;
 
             const gallery = data.map((item) => {
-                const { name, Images: rawImages, section } = item;
-                const sectionType = section?.Type || "Desconocido";
-                const images = rawImages.length > 0 ? `${STRAPI_HOST}${rawImages[0].url}` : null;
-                return { name, images, sectionType };
+                const { Images: rawImages } = item;
+                const images = rawImages.map(img => `${STRAPI_HOST}${img.url}`);
+                return { images };
             });
 
             return { gallery, pagination: meta.pagination };
