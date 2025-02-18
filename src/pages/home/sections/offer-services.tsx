@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { memo, Suspense, lazy } from "react";
 
 const CardImage = lazy(() => import("./lazy-imports/card-image"));
@@ -22,7 +23,12 @@ const OfferServices = memo(() => {
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2  lg:grid-cols-3 xl:grid-cols-4 gap-2 w-full">
                     {cards.map(({ id, title, description, image }) => (
-                        <div key={id} className="flex flex-row bg-[#FFFDF5] border border-[#798B95] gap-3 rounded-[15px] p-3 items-center justify-center">
+                        <motion.div key={id}
+                        initial={{ opacity: 0, x: Math.random() > 0.5 ? -100 : 100 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                         className="flex flex-row bg-[#FFFDF5] border border-[#798B95] gap-3 rounded-[15px] p-3 items-center justify-center">
                             <Suspense fallback={<div className="min-w-[100px] min-h-[100px] bg-transparent"></div>}>
                                 <CardImage src={image} alt={title} />
                             </Suspense>
@@ -30,7 +36,7 @@ const OfferServices = memo(() => {
                                 <p className="font-ovtreasure text-[26px] text-[#545454] font-[Ovtreasure]">{title}</p>
                                 <p className="text-[#545454]">{description}</p>
                             </div>
-                        </div>
+                        </motion.div>
                     ))}
                 </div>
             </div>

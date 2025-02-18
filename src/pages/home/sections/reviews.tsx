@@ -1,9 +1,9 @@
+import { motion } from "framer-motion";
 import cards from "../text/reviews-text.json";
 
 const Reviews = () => {
     const columns: { id: number; title: string; category: string; year: number; rating: string; description: string; image: string; }[][] = [[], [], []];
 
-    // Distribuir equitativamente las tarjetas en las 3 columnas
     cards.forEach((card, index) => {
         columns[index % 3].push(card);
     });
@@ -22,7 +22,14 @@ const Reviews = () => {
                         className={`flex flex-col gap-6 ${colIndex === 0 || colIndex === 2 ? "mt-0 lg:mt-20" : ""}`}
                     >
                         {column.map(({ id, title, category, year, rating, description, image }) => (
-                            <div key={id} className="flex flex-col p-4 rounded-lg bg-[#FFFDF5] border-2 border-[#CCB9AB] w-full lg:max-w-[400px] text-[#545454] gap-4">
+                            <motion.div
+                                key={id}
+                                initial={{ opacity: 0, x: Math.random() > 0.5 ? -100 : 100 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.8, ease: "easeOut" }}
+                                className="flex flex-col p-4 rounded-lg bg-[#FFFDF5] border-2 border-[#CCB9AB] w-full lg:max-w-[400px] text-[#545454] gap-4"
+                            >
                                 <h2 className="text-[26px] text-[Ovtreasure]">{title}</h2>
                                 <p className="text-[16px]">{description}</p>
                                 <p>{category}</p>
@@ -31,7 +38,7 @@ const Reviews = () => {
                                     <p>{year}</p>
                                     <span>{rating}</span>
                                 </div>
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 ))}

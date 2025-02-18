@@ -1,4 +1,4 @@
-import {  useEffect, useRef, useState, useMemo } from "react";
+import { useEffect, useRef, useState, useMemo } from "react";
 import { getGalleryForName } from "../../../libs/get-gallery-for-name";
 import { useLocation } from "react-router-dom";
 import { Nav } from "../../../components/layout/nav";
@@ -66,12 +66,12 @@ export default function Page() {
                     </h1>
                     <div className="w-[150px]" />
                 </div>
-                <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4 transition-all duration-500 ease-in-out">
+                <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-1 space-y-1 transition-all duration-500 ease-in-out">
                     {data?.flatMap((item) =>
                         item.images?.map((image, index) => (
                             <div
                                 key={index}
-                                className={`break-inside-avoid overflow-hidden rounded-lg transition-all duration-300 ease-in-out ${getRandomHeight(index)}`}
+                                className={`break-inside-avoid overflow-hidden flex p-2 rounded-[16px] hover:bg-[#ffe3de] transition-all duration-300 ease-in-out ${getRandomHeight(index)}`}
                             >
                                 <img
                                     src={image}
@@ -85,15 +85,20 @@ export default function Page() {
                     )}
                 </div>
                 {selectedImage && (
-                    <div style={{ zIndex: 99999 }} className="fixed inset-0 flex justify-center bg-black/50 backdrop-blur-2xl  p-4 overflow-auto min-h-[400px] min-w-[250px]">
-                        <div className="relative flex w-auto h-auto p-1 bg-[#cccccc] rounded-sm">
+                    <div style={{ zIndex: 99999 }} className="fixed inset-0 flex items-center justify-center bg-black/50 backdrop-blur-2xl p-4 overflow-y-auto">
+                        <div className="relative flex w-auto max-w-[95vw] max-h-[95vh] p-1 bg-[#cccccc] rounded-sm">
                             <button
-                                className="absolute top-0 right-5 text-white cursor-pointer rounded-full hover:text-red-700 text-6xl"
+                                className="absolute top-2 right-5 text-white cursor-pointer rounded-full hover:text-red-700 text-6xl"
                                 onClick={() => setSelectedImage(null)}
                             >
                                 &times;
                             </button>
-                            <img src={selectedImage} alt="Preview" className="w-full h-auto object-cover rounded-sm" loading="lazy" />
+                            <img
+                                src={selectedImage}
+                                alt="Preview"
+                                className="max-w-full max-h-[90vh] object-contain rounded-sm"
+                                loading="lazy"
+                            />
                         </div>
                     </div>
                 )}
