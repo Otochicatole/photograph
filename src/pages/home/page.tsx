@@ -9,6 +9,7 @@ import HistoryImages from './sections/history-images.tsx';
 import OfferServices from './sections/offer-services.tsx';
 import Reviews from './sections/reviews.tsx';
 import FAQ from './sections/faq.tsx';
+import FadeInSection from '../../components/common/observer.tsx';
 
 const MapPicker = lazy(() => import('./sections/map-picker.tsx'));
 const Footer = lazy(() => import('../../components/layout/footer.tsx'));
@@ -38,7 +39,7 @@ export default function Home() {
                 ref={headerRef}
                 className="flex flex-col bg-[url('/FOTOGRAFIAS/HEADER/Meliyabel-166.jpg')] min-h-screen w-full bg-cover items-center justify-center relative pb-20 p-3 overflow-hidden"
             >
-                <img className='w-full lg:w-[996px] lg:h-[484px]' src="./RECURSOS/LOGOTIPO/Recurso 2LOGO-IG-2.png" loading="lazy" alt="Logo"/>
+                <img className='w-full lg:w-[996px] lg:h-[484px]' src="./RECURSOS/LOGOTIPO/Recurso 2LOGO-IG-2.png" loading="lazy" alt="Logo" />
                 <p className="text-white text-2xl font-OVTreasure text-center">
                     La tua storia merita di essere raccontata con il sorriso giusto
                 </p>
@@ -52,7 +53,7 @@ export default function Home() {
                         <div className="absolute top-0 flex flex-col w-full mt-3">
                             <Nav isFixed={isNavFixed} />
                         </div>
-                        <Presentation />
+                        <FadeInSection><Presentation /></FadeInSection>
                     </section>
                     <section className="flex flex-col pt-[137px]">
                         <OfferServices />
@@ -64,7 +65,7 @@ export default function Home() {
                         <AboutMe />
                     </section>
                     <section id="contact" className="pt-[137px] min-h-screen">
-                        <Contact />
+                        <FadeInSection><Contact /></FadeInSection>
                     </section>
                     <section className="pt-[137px] min-h-screen">
                         <MapPicker />
